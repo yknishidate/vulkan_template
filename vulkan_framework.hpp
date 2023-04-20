@@ -15,18 +15,16 @@
  * limitations under the License.
  */
 
-#include "vulkan_framework.hpp"
+#include "common/logging.h"
+#include "platform/platform.h"
+#include "plugins/plugins.h"
 
-class MyApp : public vkb::Application {
-    bool prepare(vkb::Platform& platform) override {
-        if (!Application::prepare(platform)) {
-            return false;
-        }
+#ifdef _WIN32
+#pragma comment(linker, "/subsystem:windows")
+#include <ShellScalingAPI.h>
+#include <fcntl.h>
+#include <io.h>
+#include <windows.h>
+#endif
 
-        LOGI("Initializing Vulkan sample");
-    }
-};
-
-std::unique_ptr<vkb::Application> createApp() {
-    return std::make_unique<MyApp>();
-}
+std::unique_ptr<vkb::Application> createApp();

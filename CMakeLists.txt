@@ -397,6 +397,8 @@ source_group("stats\\" FILES ${STATS_FILES})
 source_group("graphing\\" FILES ${GRAPHING_FILES})
 
 set(PROJECT_FILES
+    vulkan_framework.hpp
+    vulkan_framework.cpp
     ${PLATFORM_FILES}
     ${PARSER_FILES}
     ${COMMON_FILES}
