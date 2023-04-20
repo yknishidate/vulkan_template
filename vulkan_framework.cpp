@@ -49,6 +49,9 @@ int main(int argc, char* argv[]) {
     properties.title = "Vulkan";
     platform.set_window_properties(properties);
     platform.request_application(&appInfo);
+#ifndef VK_USE_PLATFORM_ANDROID_KHR
+    vkb::Platform::set_external_storage_directory(VULKAN_SAMPLES_DIRECTORY);
+#endif
 
     if (code == vkb::ExitCode::Success) {
         code = platform.main_loop();

@@ -490,4 +490,8 @@ if(VKB_DO_CLANG_TIDY)
     set_target_properties(framework PROPERTIES CXX_CLANG_TIDY "${VKB_DO_CLANG_TIDY}")
 endif()
 
+target_compile_definitions(${PROJECT_NAME} PRIVATE
+    "VULKAN_SAMPLES_DIRECTORY=\"${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Samples/\""
+)
+
 add_subdirectory(example)
