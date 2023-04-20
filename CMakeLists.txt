@@ -471,16 +471,6 @@ if(MSVC)
     target_compile_options(${PROJECT_NAME} PUBLIC /MP)
 endif()
 
-# Copy the DLL file to the same directory as the executable
-if(WIN32)
-    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Samples/build/windows/third_party/bin/AMD64/Release/ktx.dll"
-        $<TARGET_FILE_DIR:${PROJECT_NAME}>
-        COMMENT "Copying DLL file to the executable directory"
-    )
-endif()
-
 # Link platform specific libraries
 if(ANDROID)
     # Import game-activity static lib inside the game-activity_static prefab module.
@@ -497,3 +487,5 @@ endif()
 if(VKB_DO_CLANG_TIDY)
     set_target_properties(framework PROPERTIES CXX_CLANG_TIDY "${VKB_DO_CLANG_TIDY}")
 endif()
+
+add_subdirectory(example)
