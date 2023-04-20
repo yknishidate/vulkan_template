@@ -1,0 +1,3 @@
+[submodule "Vulkan-Samples"]
+	path = Vulkan-Samples
+	url = https://github.com/KhronosGroup/Vulkan-Samples
