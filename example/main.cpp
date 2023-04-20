@@ -27,6 +27,8 @@
 #	include <windows.h>
 #endif
 
+std::unique_ptr<vkb::Application> createApp();
+
 #if defined(VK_USE_PLATFORM_ANDROID_KHR)
 #	include "platform/android/android_platform.h"
 void android_main(android_app* state)
@@ -57,10 +59,17 @@ int main(int argc, char* argv[])
 
     auto code = platform.initialize({});
 
+    apps::AppInfo appInfo{ "", createApp };
+
+    vkb::Window::OptionalProperties properties;
+    properties.title = "Vulkan";
+    platform.set_window_properties(properties);
+    platform.request_application(&appInfo);
+
     if (code == vkb::ExitCode::Success)
     {
         code = platform.main_loop();
-    }
+}
 
     platform.terminate(code);
 
