@@ -85,7 +85,7 @@ set(LINUX_D2D_FILES
 
 set(ENTRY_POINT_FILES
     # Header Files
-    vulkan_framework.hpp
+    vulkan_framework.h
     # Source Files
     vulkan_framework.cpp)
 

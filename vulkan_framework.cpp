@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-#include "vulkan_framework.hpp"
+#include "vulkan_framework.h"
 
 #if defined(VK_USE_PLATFORM_ANDROID_KHR)
 #include "platform/android/android_platform.h"
