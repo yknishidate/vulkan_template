@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(example)
+project(vulkan_project)
 
 add_executable(${PROJECT_NAME} main.cpp)
 

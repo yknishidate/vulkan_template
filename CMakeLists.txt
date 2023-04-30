@@ -500,4 +500,4 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
     "VULKAN_SAMPLES_DIRECTORY=\"${CMAKE_CURRENT_SOURCE_DIR}/Vulkan-Samples/\""
 )
 
-add_subdirectory(example)
+add_subdirectory(app)

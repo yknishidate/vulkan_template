@@ -40,15 +40,15 @@ int main(int argc, char* argv[]) {
     vkb::UnixPlatform platform{ vkb::UnixType::Linux, argc, argv };
 #endif
 #endif
-
-    auto code = platform.initialize({});
-
     apps::AppInfo appInfo{ "Vulkan", create_app };
 
     vkb::Window::OptionalProperties properties;
-    properties.title = "Vulkan";
+    properties.title = std::string{ "Vulkan" };
     platform.set_window_properties(properties);
     platform.request_application(&appInfo);
+
+    auto code = platform.initialize({});
+
 #ifndef VK_USE_PLATFORM_ANDROID_KHR
     vkb::Platform::set_external_storage_directory(VULKAN_SAMPLES_DIRECTORY);
 #endif
