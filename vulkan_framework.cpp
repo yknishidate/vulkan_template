@@ -43,7 +43,7 @@ int main(int argc, char* argv[]) {
 
     auto code = platform.initialize({});
 
-    apps::AppInfo appInfo{ "Vulkan", createApp };
+    apps::AppInfo appInfo{ "Vulkan", create_app };
 
     vkb::Window::OptionalProperties properties;
     properties.title = "Vulkan";

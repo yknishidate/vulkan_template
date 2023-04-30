@@ -27,4 +27,4 @@
 #include <windows.h>
 #endif
 
-std::unique_ptr<vkb::Application> createApp();
+std::unique_ptr<vkb::Application> create_app();

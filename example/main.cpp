@@ -1160,8 +1160,7 @@ std::unique_ptr<vkb::Application> create_hpp_hello_triangle()
     return std::make_unique<HPPHelloTriangle>();
 }
 
-
 // Pass the custom class to framework
-std::unique_ptr<vkb::Application> createApp() {
+std::unique_ptr<vkb::Application> create_app() {
     return std::make_unique<HPPHelloTriangle>();
 }
