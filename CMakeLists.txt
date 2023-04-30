@@ -31,6 +31,8 @@ set(FRAMEWORK_FILES
     Vulkan-Samples/framework/hpp_gui.h
     Vulkan-Samples/framework/hpp_resource_binding_state.h
     Vulkan-Samples/framework/hpp_resource_cache.h
+    Vulkan-Samples/framework/hpp_resource_record.h
+    Vulkan-Samples/framework/hpp_resource_replay.h
     Vulkan-Samples/framework/hpp_vulkan_sample.h
     # Source Files
     Vulkan-Samples/framework/gui.cpp
@@ -52,6 +54,7 @@ set(FRAMEWORK_FILES
     Vulkan-Samples/framework/camera.cpp
     Vulkan-Samples/framework/hpp_gui.cpp
     Vulkan-Samples/framework/hpp_api_vulkan_sample.cpp
+    Vulkan-Samples/framework/hpp_resource_cache.cpp
 	Vulkan-Samples/framework/hpp_vulkan_sample.cpp)
 
 set(COMMON_FILES
@@ -67,6 +70,7 @@ set(COMMON_FILES
     Vulkan-Samples/framework/common/strings.h
     Vulkan-Samples/framework/common/tags.h
     Vulkan-Samples/framework/common/hpp_error.h
+    Vulkan-Samples/framework/common/hpp_resource_caching.h
     Vulkan-Samples/framework/common/hpp_strings.h
     Vulkan-Samples/framework/common/hpp_utils.h
     Vulkan-Samples/framework/common/hpp_vk_common.h
@@ -234,6 +238,8 @@ set(CORE_FILES
     Vulkan-Samples/framework/core/hpp_command_buffer.h
     Vulkan-Samples/framework/core/hpp_command_pool.h
     Vulkan-Samples/framework/core/hpp_debug.h
+    Vulkan-Samples/framework/core/hpp_descriptor_pool.h
+    Vulkan-Samples/framework/core/hpp_descriptor_set.h
     Vulkan-Samples/framework/core/hpp_descriptor_set_layout.h
     Vulkan-Samples/framework/core/hpp_device.h
     Vulkan-Samples/framework/core/hpp_framebuffer.h
